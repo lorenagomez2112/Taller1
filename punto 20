@@ -1,0 +1,70 @@
+package punto_20;
+public class{
+static Scanner Entrada= new Scanner(System.in);
+    static int Matriz[][]=null;
+
+    public static int[][] Tamaño(int [][] x){
+        int NFilas=24,NColumnas=6;
+         X=new int[nfilas][ncolumnas];
+        return X;
+    }
+    public static void LLenar(int x[][]){
+        for (int i = 0; i <Matriz.length ; i++) {
+            for (int j = 0; j <Matriz[i].length; j++) {
+                System.out.println("digite la nota para la materia " +(j+1)+" del estudiante "+(i+1));
+                X[i][j]= (int) Double.parseDouble(entrada.next());
+                
+               
+                
+            }
+        }
+    }
+    public static void Promedio(int x[][]){
+        
+        for (int i = 0; i <matriz.length ; i++) {
+            int Acum = 0;
+            for (int j = 0; j <matriz[i].length; j++) {
+               acum+=x[i][j];
+               
+                
+            }
+            double Prom=(double) Acum/6;
+            System.out.println("el promedio del estudiante "+(i+1)+" es de :"+Prom);
+        }
+    }
+     public static void Aprobados(int x[][]){
+        for (int i = 0; i <x.length; i++) {
+            int Contador=0;
+            for (int[] x1 : x) {
+                if (x1[i] >= 3) {
+                    contador+=1;
+                }
+               
+            }
+         System.out.println("la cantidad de alumnos que aprobaron la materia "+(i+1)+" es: "+Contador);
+         System.out.println("la cantidad de alumnos que reprobaron la materia "+(i+1)+" es: "+(24-Contador));
+
+        }
+    }
+    public static void Promediomateria(int x[][]){
+        for (int i = 0; i <Matriz.length ; i++) {
+            double acum=0;
+            for (int j = 0; j <Matriz[i].length; j++) {
+                acum+=x[j][i];
+                        
+            }
+            System.out.println("el promedio para la materia "+(i+1)+" es de:"+((double) (acum/24)));
+        }    
+    }
+       
+        
+       
+    public static void main(String[] args) {
+        Matriz=Tamaño(matriz);
+        LLenar(matriz);
+        Promedio(matriz);
+        Aprobados(matriz);
+        Promediomateria(matriz);
+        
+    }
+    }
