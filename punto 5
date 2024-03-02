@@ -4,28 +4,28 @@ package five;
 import java.util.Scanner;
 
 public class JavaApplication1 {
-    static Scanner entrada= new Scanner(System.in);
-    static int matriz[][]=null;
+    static Scanner ENtrada= new Scanner(System.in);
+    static int MAtriz[][]=null;
 
-    public static int[][] tamaño(int [][] x){
-        int nfilas,ncolumnas;
+    public static int[][] TAmaño(int [][] x){
+        int NFilas,NColumnas;
         System.out.println("digite el numero de filas");
-        nfilas=Integer.parseInt(entrada.next());
+        NFilas=Integer.parseInt(entrada.next());
         System.out.println("digite el numero de columnas");
-        ncolumnas=Integer.parseInt(entrada.next());
-        x=new int[nfilas][ncolumnas];
-        return x;
+        NColumnas=Integer.parseInt(entrada.next());
+        X=new int[NFilas][NColumnas];
+        return X;
     }
-    public static void llenar(int x[][]){
+    public static void LLenar(int x[][]){
         for (int i = 0; i <matriz.length ; i++) {
             for (int j = 0; j <matriz[i].length; j++) {
-               x[i][j]=(int)(Math.random()*10);
+               X[i][j]=(int)(Math.random()*10);
                
                 
             }
         }
     }
-    public static void mostrar(int x[][]){
+    public static void MOstrar(int x[][]){
         for (int i = 0; i <x.length; i++) {
             for (int j = 0; j <x[i].length; j++) {
                 System.out.print(x[i][j]);
@@ -34,8 +34,8 @@ public class JavaApplication1 {
             System.out.println();
         }
     }
-    public static void preguntar(int x[][]){
-        int contador=0,respf1,respc1,respf2,respc2;
+    public static void PReguntar(int x[][]){
+        int COntador=0,respf1,respc1,respf2,respc2;
         
         do{
             System.out.println("digite la posicion en filas");
@@ -49,21 +49,21 @@ public class JavaApplication1 {
             System.out.println("el valor de la posicion 1 es:"+x[respf1][respc1]);
             System.out.println("el valor de la posicion 2 es:"+x[respf2][respc2]);
             if(x[respf1][respc1]==x[respf2][respc2]){
-                contador+=1;
+                COntador+=1;
                 
             }
         }while(contador<10);
     }
     
     public static void main(String[] args) {
-       matriz=tamaño(matriz);
-        System.out.println("el numero de filas es :"+matriz.length);
-        System.out.println("el numero de columnas es :"+matriz[0].length);
+       MAtriz=TAmaño(MAtriz);
+        System.out.println("el numero de filas es :"+MAtriz.length);
+        System.out.println("el numero de columnas es :"+MAtriz[0].length);
         System.out.println();
-        llenar(matriz);
+        LLenar(MAtriz);
         System.out.println();
-        preguntar(matriz);
+        preguntar(MAtriz);
         System.out.println();
         System.out.println("la matrix era:");
-        mostrar(matriz);
+        MOstrar(MAtriz);
     }
