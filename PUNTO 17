@@ -1,0 +1,44 @@
+package javaapplication2;
+import java.util.Scanner;
+
+public class JavaApplication1 {
+public static void main(String[] args){
+int [] Vector  = {5,21,6,45,1,2,4};
+        int [] VectorPares = new int[Vector.length];
+        int [] VectorImpares = new int[Vector.length];
+        int [] VectorFinal = new int[Vector.length];
+        int temporal =0;
+        int countPares = 0;
+        int countImpares = 0;
+        for(int i=0; i<Vector.length; i++){
+            if(Vector[i]%2==0){
+                VectorPares[countPares++]=Vector[i];
+            }else{
+                VectorImpares[countImpares++]=Vector[i];   
+                }
+            }
+        for (int i = 0; i < countPares; i++) {
+         for (int j = 1; j < (countPares - i); j++) {
+            if (VectorPares[j - 1] > VectorPares[j]) {
+                temporal = VectorPares[j - 1];
+                VectorPares[j - 1] = VectorPares[j];
+                VectorPares[j] = temporal;
+            }
+          }
+        }
+        for (int i = 0; i < countImpares; i++) {
+         for (int j = 1; j < (countImpares - i); j++) {
+            if (VectorImpares[j - 1] < VectorImpares[j]) {
+                temporal = VectorImpares[j - 1];
+                VectorImpares[j - 1] = VectorImpares[j];
+                VectorImpares[j] = temporal;
+            }    
+          }
+        }
+        for(int i=0; i<countPares; i++) {
+            VectorFinal[i]=VectorPares[i];            
+        }
+        for(int j=0; j<countImpares; j++) {
+            VectorFinal[countPares+j]=VectorImpares[j];
+        }
+        System.out.println(Arrays.toString(VectorFinal));
