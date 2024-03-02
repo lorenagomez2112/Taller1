@@ -1,0 +1,33 @@
+package ;
+public class x{
+public static void main(String[] args) {
+Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese tamaño del vector 1: ");
+        int TamanoVectorUno = entrada.nextInt();
+        int [] VerctorUno = new int [TamanoVectorUno];
+        String NumerosIguales = "";
+        for(int i=0; i<TamanoVectorUno; i++){
+            System.out.println("Ingrese numero en la posicion" + " " + (i+1));
+            int respuesta = entrada.nextInt();
+            VerctorUno[i] = respuesta;
+        }
+        System.out.println("Ingrese tamaño del vector 2: ");
+        int TamanoVectorDos = entrada.nextInt();
+        int [] VectorDos = new int [TamanoVectorDos];
+        for(int i=0; i<TamanoVectorDos; i++){
+            System.out.println("Ingrese numero en la posicion" + " " + (i+1));
+            int respuestaDos = entrada.nextInt();
+            VectorDos[i] = respuestaDos;
+        }
+        for(int i=0; i<TamanoVectorUno; i++){
+            for(int j=0; j<TamanoVectorDos; j++){
+                if(VerctorUno[i]==VectorDos[j]){
+                    numerosIguales += VerctorUno[i] + ", ";
+                }
+            }
+        }
+        System.out.println(NumerosIguales);
+    }
+    
+}
+]
